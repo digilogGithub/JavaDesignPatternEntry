@@ -7,7 +7,7 @@ public class Client {
         bookShelf.appendBook(new Book("Bible"));
         bookShelf.appendBook(new Book("Cinederlla"));
         bookShelf.appendBook(new Book("Daddy-Long-Legs"));
-        Iterator iterator = bookShelf.itorator();
+        Iterator iterator = bookShelf.iterator();
         while(iterator.hasNext()) {
             Book book = (Book) iterator.next();
             System.out.println(book.getName());

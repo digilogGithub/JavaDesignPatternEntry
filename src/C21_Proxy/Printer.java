@@ -3,10 +3,6 @@ package C21_Proxy;
 public class Printer implements Printable {
     private String name;
 
-    public Printer() {
-        heavyJob("Print의 인스턴스를 생성 중");
-    }
-
     public Printer(String name) {
         this.name = name;
         heavyJob("Print의 인스턴스(" + name + ")를 생성 중");

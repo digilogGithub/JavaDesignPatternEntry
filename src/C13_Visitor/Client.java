@@ -21,9 +21,9 @@ public class Client {
             Directory kim = new Directory("Kim");
             Directory lee = new Directory("Lee");
             Directory park = new Directory("Park");
-            rootDir.add(kim);
-            rootDir.add(lee);
-            rootDir.add(park);
+            usrDir.add(kim);
+            usrDir.add(lee);
+            usrDir.add(park);
             kim.add(new File("diary.html", 100));
             kim.add(new File("Composite.java", 200));
             lee.add(new File("memo.txt", 300));

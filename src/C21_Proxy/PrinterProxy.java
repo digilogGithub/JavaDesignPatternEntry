@@ -3,9 +3,6 @@ package C21_Proxy;
 public class PrinterProxy implements Printable {
     private String name;
     private Printer real;
-    public PrinterProxy() {
-
-    }
 
     public PrinterProxy(String name) {
         this.name = name;

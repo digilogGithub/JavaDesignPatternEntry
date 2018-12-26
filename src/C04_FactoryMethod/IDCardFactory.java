@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IDCardFactory extends Factory {
-    private List<Product> idCardList = new ArrayList<Product>();
+    private List<Product> idCardList = new ArrayList<>();
 
     @Override
     protected Product createProduct(String owner) {

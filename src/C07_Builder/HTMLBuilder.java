@@ -6,7 +6,6 @@ public class HTMLBuilder extends Builder {
     private String fileName;
     private FileWriter fileWriter;
     private StringBuffer buffer = new StringBuffer();
-//    private PrintWriter printWriter;
 
     @Override
     public void makeTitle(String title) {

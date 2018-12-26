@@ -20,6 +20,8 @@ public class BigChar {
             }
             reader.close();
             this.fontData = buf.toString();
+//          simple make String from file
+//          fontData = new String(Files.readAllBytes(Paths.get("src/E01/input/big"+charName+".txt")));
         } catch (IOException e) {
             e.printStackTrace();
             this.fontData = charName + "?";

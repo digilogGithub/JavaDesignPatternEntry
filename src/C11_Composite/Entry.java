@@ -5,11 +5,11 @@ public abstract class Entry {
     public abstract int getSize();
 
     public Entry add(Entry entry) throws FileTreatmentException {
-        throw new FileTreatmentException();
+        throw new FileTreatmentException("There is no Directory or File");
     }
 
     public void printList() {
-        printList(" ");
+        printList("");
     }
 
     protected abstract void printList(String prefix);

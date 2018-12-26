@@ -1,7 +1,5 @@
 package C04_FactoryMethod;
 
-import C04_FactoryMethod.Product;
-
 public class IDCard implements Product {
     private String owner;
 

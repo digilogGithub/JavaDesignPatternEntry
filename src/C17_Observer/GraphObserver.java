@@ -3,7 +3,7 @@ package C17_Observer;
 public class GraphObserver implements Observer {
     @Override
     public void update(NumberGenerator numberGenerator) {
-        System.out.print("GraphObserver : ");
+        System.out.print("ObserverGraph : ");
         int count = numberGenerator.getNumber();
         for (int i = 0; i < count; i++) {
             System.out.print("*");

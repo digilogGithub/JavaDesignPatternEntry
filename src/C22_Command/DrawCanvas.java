@@ -13,7 +13,7 @@ public class DrawCanvas extends Canvas implements Drawable {
         this.macroCommand = macroCommand;
     }
 
-    public void paint(Graphics graphics) {
+    public void paint() {
         macroCommand.execute();
     }
 

@@ -16,9 +16,11 @@ public class BigCharFactory {
 
     public synchronized BigChar getBigChar(char charName) {
         BigChar bigChar = pool.get("" + charName);
+//        BigChar bigChar = pool.get(charName);
         if (bigChar == null) {
             bigChar = new BigChar(charName);
             pool.put("" + charName, bigChar);
+//            pool.put(String.valueOf(charName),bigChar);
         }
         return bigChar;
     }

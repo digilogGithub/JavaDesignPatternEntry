@@ -5,6 +5,7 @@ import java.util.ArrayList;
 // <command list> ::= <command>* end
 public class CommandListNode extends Node {
     private ArrayList<Node> list = new ArrayList();
+
     public void parse(Context context) throws ParseException {
         while (true) {
             if (context.currentToken() == null) {
@@ -19,6 +20,7 @@ public class CommandListNode extends Node {
             }
         }
     }
+
     public String toString() {
         return list.toString();
     }

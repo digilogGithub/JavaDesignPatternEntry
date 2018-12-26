@@ -1,11 +1,10 @@
 package C22_Command;
 
-import javax.crypto.Mac;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.*;
 
 public class Client extends JFrame implements ActionListener, MouseMotionListener, WindowListener {
+    private DrawCommand command;
     private MacroCommand macroCommand = new MacroCommand();
     private DrawCanvas drawCanvas = new DrawCanvas(400, 400, macroCommand);
     private JButton clearButton = new JButton("clear");
@@ -30,7 +29,7 @@ public class Client extends JFrame implements ActionListener, MouseMotionListene
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == clearButton) {
+        if (e.getSource() == clearButton) {
             macroCommand.clear();
             drawCanvas.repaint();
         }
@@ -38,7 +37,7 @@ public class Client extends JFrame implements ActionListener, MouseMotionListene
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        Command command = new DrawCommand(drawCanvas, e.getPoint());
+        command = new DrawCommand(drawCanvas, e.getPoint());
         macroCommand.append(command);
         command.execute();
     }
@@ -84,6 +83,6 @@ public class Client extends JFrame implements ActionListener, MouseMotionListene
     }
 
     public static void main(String[] args) {
-        new Client("Command Pattern Sample");
+        new Client("CommandNode Pattern Sample");
     }
 }

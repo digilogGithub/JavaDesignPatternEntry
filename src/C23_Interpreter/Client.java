@@ -1,7 +1,7 @@
 package C23_Interpreter;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class Client {
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package C08_AbstractFactory;
 
-import sun.font.FontConfigManager;
-
 public abstract class Factory {
 
     public static Factory getInstance(String className) {

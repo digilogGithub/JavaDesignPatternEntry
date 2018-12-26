@@ -1,7 +1,5 @@
 package C18_Memento;
 
-import sun.plugin2.message.MouseEventMessage;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,9 +19,8 @@ public class Memento {
         fruits.add(fruit);
     }
     
-    List getFruit() {
-        return (List) new ArrayList<>(fruits);
-//        return (List) fruits;
+    List<String> getFruit() {
+        return fruits;
     }
 
 }

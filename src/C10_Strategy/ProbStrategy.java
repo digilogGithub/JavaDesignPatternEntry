@@ -34,7 +34,7 @@ public class ProbStrategy implements Strategy {
     private int getSum(int currentHandValue) {
         int sum=0;
         for (int i = 0; i <3 ; i++) {
-            sum = history[currentHandValue][i];
+            sum += history[currentHandValue][i];
         }
         return sum;
     }

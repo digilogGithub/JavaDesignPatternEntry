@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class LoginFrame extends Frame implements ActionListener, Mediator {
-    private ColleagueCheckBox checkBoxGeust;
+    private ColleagueCheckBox checkBoxGuest;
     private ColleagueCheckBox checkBoxLogin;
     private ColleagueTextField textFieldUser;
     private ColleagueTextField textFieldPass;
@@ -19,7 +19,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
 
         createColleageues();
 
-        add(checkBoxGeust);
+        add(checkBoxGuest);
         add(checkBoxLogin);
         add(new Label("User Name"));
         add(textFieldUser);
@@ -37,7 +37,7 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
     @Override
     public void createColleageues() {
         CheckboxGroup checkboxGroup = new CheckboxGroup();
-        checkBoxGeust = new ColleagueCheckBox("Guest", checkboxGroup, true);
+        checkBoxGuest = new ColleagueCheckBox("Guest", checkboxGroup, true);
         checkBoxLogin = new ColleagueCheckBox("Login", checkboxGroup, false);
         textFieldUser = new ColleagueTextField("",10);
         textFieldPass = new ColleagueTextField("", 10);
@@ -45,14 +45,14 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
         buttonOK = new ColleagueButton("OK");
         buttonCancel = new ColleagueButton("Cancel");
 
-        checkBoxGeust.setMediator(this);
+        checkBoxGuest.setMediator(this);
         checkBoxLogin.setMediator(this);
         textFieldUser.setMediator(this);
         textFieldPass.setMediator(this);
         buttonOK.setMediator(this);
         buttonCancel.setMediator(this);
 
-        checkBoxGeust.addItemListener(checkBoxGeust);
+        checkBoxGuest.addItemListener(checkBoxGuest);
         checkBoxLogin.addItemListener(checkBoxLogin);
         textFieldUser.addTextListener(textFieldUser);
         textFieldPass.addTextListener(textFieldPass);
@@ -63,9 +63,11 @@ public class LoginFrame extends Frame implements ActionListener, Mediator {
 
     @Override
     public void colleagueChanged() {
-        if (checkBoxGeust.getState()) {
+        if (checkBoxGuest.getState()) {
             textFieldUser.setColleagueEnabled(false);
             textFieldPass.setColleagueEnabled(false);
+            textFieldUser.setText("");
+            textFieldPass.setText("");
             buttonOK.setColleagueEnabled(true);
         } else {
             textFieldUser.setColleagueEnabled(true);

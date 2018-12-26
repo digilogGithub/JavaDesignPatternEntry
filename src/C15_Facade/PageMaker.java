@@ -8,7 +8,7 @@ public class PageMaker {
     private PageMaker() {
     }
 
-    public static void makeWelcomPage(String mailAddr, String fileName) {
+    public static void makeWelcomePage(String mailAddr, String fileName) {
         Properties mailProperties = Database.getInstance("MailData");
         String userName = mailProperties.getProperty(mailAddr);
         try {
